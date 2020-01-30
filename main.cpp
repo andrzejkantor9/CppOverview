@@ -2,10 +2,13 @@
 
 #include "conio.h"
 
+#include "Basics/demo.h"
+
 int main()
 {
-    std::cout<<"Hello world";
+    //WelcomeUser();
+    ProceedAddingTwoNumbers();
 
     _getch();
     return 0;
-}
+} 
