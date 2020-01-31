@@ -1,0 +1,1 @@
+g++ main.cpp Basics\*.cpp -o main -static-libstdc++

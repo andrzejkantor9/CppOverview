@@ -6,7 +6,7 @@
 
 int main()
 {
-    //WelcomeUser();
+    WelcomeUser();
     ProceedAddingTwoNumbers();
 
     _getch();
