@@ -1,5 +1,7 @@
 #include <string>
 
+std::string StringToLower(std::string InString);
+
 std::string ChooseTask();
 void RunChosenTask(std::string InChosenTask);
 

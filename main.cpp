@@ -6,8 +6,7 @@
 
 int main()
 {
-    ChooseTask();
-
+    RunChosenTask(ChooseTask());
     //WelcomeUser();
     //ProceedAddingTwoNumbers();
 

@@ -1,13 +1,13 @@
 #include "demo.h"
 
 #include <iostream>
-#include <algorithm>
-#include <cctype>
+#include <string>
+#include <locale>
 
 std::string ChooseTask()
 {
     std::string ChosenTask;
-    std::cout<<"Choose what program you want to run: WeclomeUser, AddTwoNumbers, AreaOfCircle, SumOfN."<<std::endl;
+    std::cout<<"Choose what program you want to run: WelcomeUser, AddTwoNumbers, AreaOfCircle, SumOfN. (case does not matter)"<<std::endl;
     std::cin>>ChosenTask;
 
     return ChosenTask;
@@ -36,7 +36,7 @@ void WelcomeUser()
     std::cout<<"Welcome "<<Name<<std::endl;
 }
 
-void area()
+void AreaOfCircle()
 {
     int b=7,h=5;
    
@@ -56,30 +56,39 @@ int SumOfN(int n)
     return sum;
 }
 
+std::string StringToLower(std::string InString)
+{
+    std::string StringToReturn = "";
+    for(int i=0; i<InString.length(); ++i)
+    {
+        StringToReturn += std::tolower(InString[i], std::locale());
+    }
+    return StringToReturn;
+}
+
 void RunChosenTask(std::string InChosenTask)
 {
-    /*
-    std::string ChosenTaskToLower = std::transform(InChosenTask.begin(), InChosenTask.end(), InChosenTask.begin(), std::tolower);
-    if (ChosenTaskToLower._Equal("welcomeuser"))
+    std::string ChosenTaskInLowercase = "";
+    ChosenTaskInLowercase = StringToLower(InChosenTask);
+
+    if (ChosenTaskInLowercase.compare("welcomeuser") == 0)
     {
         WelcomeUser();
     }
-    else if (ChosenTaskToLower._Equal("addtwonumbers"))
+    else if (ChosenTaskInLowercase.compare("addtwonumbers") == 0)
     {
         ProceedAddingTwoNumbers();
     }
-    else if (ChosenTaskToLower._Equal("areaofcircle"))
+    else if (ChosenTaskInLowercase.compare("areaofcircle") == 0)
     {
         AreaOfCircle();
     }
-    else if (ChosenTaskToLower._Equal("sumofn"))
+    else if (ChosenTaskInLowercase.compare("sumofn") == 0)
     {
         SumOfN(5);
     }
     else
     {
         std::cout<<"User didn't pass proper program to run. Finishing execution."<<std::endl;
-    }
-    */
-        
+    }         
 }

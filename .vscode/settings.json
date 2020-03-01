@@ -35,6 +35,19 @@
         "xtr1common": "cpp",
         "xutility": "cpp",
         "string": "cpp",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "xhash": "cpp",
+        "cctype": "cpp",
+        "ctime": "cpp",
+        "list": "cpp",
+        "locale": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "xlocbuf": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp"
     }
 }
