@@ -7,7 +7,7 @@
 std::string ChooseTask()
 {
     std::string ChosenTask;
-    std::cout<<"Choose what program you want to run: WelcomeUser, AddTwoNumbers, AreaOfCircle, SumOfN. (case does not matter)"<<std::endl;
+    std::cout<<"Choose what program you want to run: WelcomeUser, AddTwoNumbers, AreaOfTriangle, SumOfN. (case does not matter)"<<std::endl;
     std::cin>>ChosenTask;
 
     return ChosenTask;
@@ -15,7 +15,7 @@ std::string ChooseTask()
 
 void ProceedAddingTwoNumbers()
 {
-        int a, b;
+    int a, b;
     std::cout<<"Type two numbers to add:"<<std::endl;
     std::cin>>a>>b;
     int result = AddTwoNumbers(a, b);
@@ -36,23 +36,24 @@ void WelcomeUser()
     std::cout<<"Welcome "<<Name<<std::endl;
 }
 
-void AreaOfCircle()
+void AreaOfTriangle()
 {
-    int b=7,h=5;
-   
-    float area;
-	
+    int b=1,h=1;
+    std::cout<<"Type height and arm (in integral numbers): "<<std::endl;
+    std::cin>>b>>h;
+      
+    float area;	
     area= static_cast<float>(b) * static_cast<float>(h) / 2.f;
     
-    std::cout<<area;
+    std::cout<<"Area of triangle is: "<<area<<std::endl;
 }
 
 int SumOfN(int n)
 {
     int sum;
-    
     sum= (n * (n+1)) / 2;
     
+    std::cout<<"Sum of N equals: "<<sum<<std::endl;
     return sum;
 }
 
@@ -79,13 +80,16 @@ void RunChosenTask(std::string InChosenTask)
     {
         ProceedAddingTwoNumbers();
     }
-    else if (ChosenTaskInLowercase.compare("areaofcircle") == 0)
+    else if (ChosenTaskInLowercase.compare("areaoftriangle") == 0)
     {
-        AreaOfCircle();
+        AreaOfTriangle();
     }
     else if (ChosenTaskInLowercase.compare("sumofn") == 0)
     {
-        SumOfN(5);
+        int n = 1;
+        std::cout<<"Type integral number for SumOfN function:"<<std::endl;
+        std::cin>>n;   
+        SumOfN(n);
     }
     else
     {

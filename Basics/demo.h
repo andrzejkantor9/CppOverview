@@ -10,9 +10,8 @@ int AddTwoNumbers(int a, int b);
 
 void WelcomeUser();
 
-void AreaOfCircle();
+void AreaOfTriangle();
 
 int SumOfN(int n);
 
 //TODO save files in ,bat before compilation
-//TODO make areaofcircle and sumofn interactable
